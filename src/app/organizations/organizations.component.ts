@@ -19,7 +19,6 @@ export class OrganizationsComponent implements OnInit {
       this.organizations = data.organizations.organization;
       this.hasNext = data.organizations.hasNext;
       this.nextOrgId = data.organizations.nextOrgId;
-      console.log(this.organizations);
     });
   }
 }

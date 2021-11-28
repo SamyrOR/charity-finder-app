@@ -13,8 +13,8 @@ import { Organizations } from './organizations';
   providedIn: 'root',
 })
 export class OrganizationsService {
-  headers = new HttpHeaders().set('Content-Type', 'Application/json');
-  params = new HttpParams().set('api_key', `${environment.key}`);
+  // headers = new HttpHeaders().set('Content-Type', 'Application/json');
+  // params = new HttpParams().set('api_key', `${environment.key}`);
   private apiUrl: String = environment.baseUrl;
 
   constructor(private httpClient: HttpClient) {}
