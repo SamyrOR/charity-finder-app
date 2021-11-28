@@ -1,4 +1,144 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+.badge-pill[data-theme="animals"] {
+  background-color: $yellow;
+  color: $dark;
+}
+
+.badge-pill[data-theme="children"] {
+  background-color: $blue;
+  color: #fff;
+}
+
+.badge-pill[data-theme="climate"] {
+  background-color: #6495ed;
+  color: #fff;
+}
+
+.badge-pill[data-theme="disaster"] {
+  background-color: $dark;
+  color: #fff;
+}
+
+.badge-pill[data-theme="edu"] {
+  background-color: $purple;
+  color: #fff;
+}
+
+.badge-pill[data-theme="democ"] {
+  background-color: $teal;
+  color: $dark;
+}
+
+.badge-pill[data-theme="ecdev"] {
+  background-color: $orange;
+  color: $light;
+}
+
+.badge-pill[data-theme="env"] {
+  background-color: $green;
+  color: #fff;
+}
+
+.badge-pill[data-theme="gender"] {
+  background-color: $indigo;
+  color: #fff;
+}
+
+.badge-pill[data-theme="health"] {
+  background-color: #ec7063;
+  color: #fff;
+}
+
+.badge-pill[data-theme="human"] {
+  background-color: #800000;
+  color: #fff;
+}
+
+.badge-pill[data-theme="rights"] {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.badge-pill[data-theme="sport"] {
+  background-color: $red;
+  color: #fff;
+}
+
+.badge-pill[data-theme="tech"] {
+  background-color: $info;
+  color: #fff;
+}
+
+.badge-pill[data-theme="hunger"] {
+  background-color: #808000;
+  color: #fff;
+}
+
+.badge-pill[data-theme="art"] {
+  background-color: #ff90fa;
+  color: $dark;
+}
+
+.badge-pill[data-theme="lgbtq"] {
+  background-color: $purple;
+  color: #fff;
+}
+
+.badge-pill[data-theme="covid-19"] {
+  background-color: #808080;
+  color: #fff;
+}
+
+.badge-pill[data-theme="water"] {
+  background-color: #00ffff;
+  color: $dark;
+}
+
+.badge-pill[data-theme="disability"] {
+  background-color: #fad7a0;
+  color: $dark;
+}
+
+.badge-pill[data-theme="endabuse"] {
+  background-color: #a03535;
+  color: #fff;
+}
+
+.badge-pill[data-theme="mentalhealth"] {
+  background-color: #5cec8a;
+  color: $dark;
+}
+
+.badge-pill[data-theme="justice"] {
+  background-color: #873600;
+  color: #fff;
+}
+
+.badge-pill[data-theme="refugee"] {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.badge-pill[data-theme="reproductive"] {
+  background-color: #f149a5;
+  color: #fff;
+}
+
+.badge-pill[data-theme="housing"] {
+  background-color: #95a5a6;
+  color: #fff;
+}
+
+.badge-pill[data-theme="agriculture"] {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.badge-pill[data-theme="wildlife"] {
+  background-color: #f39c12;
+  color: $dark;
+}
