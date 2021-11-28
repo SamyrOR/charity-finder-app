@@ -9,7 +9,7 @@
   <div>
     <div class="row align-items-center mb-3">
       <p class="col m-0">Find charity's:</p>
-      <div class="input-group col-3">
+      <div class="input-group col col-md-3">
         <select
           class="custom-select"
           id="inputGroupSelect04"
@@ -27,111 +27,48 @@
         </div>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 mb-5">
-      <div class="col mb-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-2">
+      <div *ngFor="let org of organizations" class="col mb-4">
         <div class="card h-100">
           <img
-            src="http://lorempixel.com.br/300/300/?1"
+            style="height: 300px"
+            [src]="org.logoUrl"
             class="card-img-top"
-            alt="Organization Logo"
+            [alt]="org.name + ' Logo'"
           />
           <div class="card-body">
-            <h5 class="card-title">Organization Name</h5>
-            <p class="card-text">Organization ID</p>
-            <p class="card-text">
-              Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-              disputationi eu sit. Vide electram sadipscing et per. Per aumento
-              de cachacis.
+            <h5 class="card-title">{{ org.name }}</h5>
+            <p class="card-text">ID: {{ org.id }}</p>
+            <p class="card-text">Active Projects: {{ org.activeProjects }}</p>
+            <!-- <p class="card-text">
+              {{ org.mission }}
+            </p> -->
+            <p class="cad-text">
+              <span
+                class="badge badge-pill badge-primary mr-1"
+                *ngFor="let theme of org.themes.theme"
+                >{{ theme.name }}</span
+              >
             </p>
-            <p class="card-text">Organization Adress</p>
-            <a href="#" class="btn btn-primary">Organization Link</a>
-          </div>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img
-            src="http://lorempixel.com.br/300/300/?1"
-            class="card-img-top"
-            alt="Organization Logo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Organization Name</h5>
-            <p class="card-text">Organization ID</p>
-            <p class="card-text">
-              Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-              disputationi eu sit. Vide electram sadipscing et per. Per aumento
-              de cachacis, eu reclamis. Paisis, filhis, espiritis santis.
-              Cevadis im ampola pa arma uma pindureta.
-            </p>
-            <p class="card-text">Organization Adress</p>
-            <a href="#" class="btn btn-primary">Organization Link</a>
-          </div>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img
-            src="http://lorempixel.com.br/300/300/?1"
-            class="card-img-top"
-            alt="Organization Logo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Organization Name</h5>
-            <p class="card-text">Organization ID</p>
-            <p class="card-text">
-              Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-              disputationi eu sit. Vide electram sadipscing et per. Per aumento
-              de cachacis, eu reclamis. Paisis, filhis, espiritis santis.
-              Cevadis im ampola pa arma uma pindureta.
-            </p>
-            <p class="card-text">Organization Adress</p>
-            <a href="#" class="btn btn-primary">Organization Link</a>
-          </div>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img
-            src="http://lorempixel.com.br/300/300/?1"
-            class="card-img-top"
-            alt="Organization Logo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Organization Name</h5>
-            <p class="card-text">Organization ID</p>
-            <p class="card-text">
-              Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-              disputationi eu sit. Vide electram sadipscing et per. Per aumento
-              de cachacis, eu reclamis. Paisis, filhis, espiritis santis.
-              Cevadis im ampola pa arma uma pindureta.
-            </p>
-            <p class="card-text">Organization Adress</p>
-            <a href="#" class="btn btn-primary">Organization Link</a>
-          </div>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img
-            src="http://lorempixel.com.br/300/300/?1"
-            class="card-img-top"
-            alt="Organization Logo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Organization Name</h5>
-            <p class="card-text">Organization ID</p>
-            <p class="card-text">
-              Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-              disputationi eu sit. Vide electram sadipscing et per. Per aumento
-              de cachacis, eu reclamis. Paisis, filhis, espiritis santis.
-              Cevadis im ampola pa arma uma pindureta.
-            </p>
-            <p class="card-text">Organization Adress</p>
-            <a href="#" class="btn btn-primary">Organization Link</a>
+            <p class="card-text">From: {{ org.country }}</p>
+            <!-- <p class="card-text">
+              Locate: {{ org.addressLine1 }} {{ org.city }} - {{ org.state }} /
+              {{ org.iso3166CountryCode }}
+            </p> -->
+            <a [href]="org.url" target="_blank" class="btn btn-primary"
+              >Visit Page</a
+            >
           </div>
         </div>
       </div>
     </div>
+    <ngb-pagination
+      class="d-flex justify-content-end mb-3"
+      [collectionSize]="120"
+      [(page)]="page"
+      [maxSize]="5"
+      [rotate]="true"
+      [boundaryLinks]="true"
+    ></ngb-pagination>
   </div>
 </main>
