@@ -31,7 +31,7 @@ export interface Project {
   imageLink: string;
   image: {
     title: string;
-    imageLink: Images[];
+    imagelink: Images[];
   };
 }
 

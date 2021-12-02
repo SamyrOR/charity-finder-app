@@ -7,25 +7,26 @@
     </p>
   </div>
   <div>
-    <div class="row align-items-center mb-3">
-      <p class="col m-0">Find charity's:</p>
-      <div class="input-group col col-md-3">
-        <select
-          class="custom-select"
-          id="inputGroupSelect04"
-          aria-label="Example select with button addon"
-        >
-          <option selected>Choose...</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button">
-            Button
-          </button>
+    <div class="row justify-content-between mb-3">
+      <p class="col-auto m-0 mb-1 mb-lg-0">Find charity's:</p>
+      <form
+        class="mx-3"
+        [formGroup]="form"
+        (ngSubmit)="loadData(1, form.get('searchQuery')?.value || '*')"
+      >
+        <div class="form-row">
+          <div class="col-auto">
+            <input
+              type="text"
+              class="form-control"
+              name="searchQuery"
+              placeholder="Project | Org | Country"
+              formControlName="searchQuery"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
         </div>
-      </div>
+      </form>
     </div>
     <div
       *ngIf="isLoading"
@@ -35,7 +36,13 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <div *ngIf="!isLoading" class="row row-cols-1 row-cols-md-2 mb-2">
+    <div
+      *ngIf="erro"
+      class="d-flex container align-items-center text-danger error"
+    >
+      <h3>{{ erroMessage }}</h3>
+    </div>
+    <div *ngIf="!isLoading && !erro" class="row row-cols-1 row-cols-md-2 mb-2">
       <div *ngFor="let project of projects" class="col mb-4">
         <div class="card h-100">
           <img
@@ -45,7 +52,7 @@
             [alt]="project.image.title"
           />
 
-          <div class="card-body">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{ project.title }}</h5>
             <p class="card-text font-italic">{{ project.themeName }}</p>
             <p class="card-text">
@@ -54,7 +61,7 @@
                 {{ project.organization.name }}</span
               >
             </p>
-            <p class="cad-text">
+            <p>
               <span
                 class="badge badge-pill mr-1"
                 *ngFor="let theme of project.organization.themes.theme"
@@ -63,29 +70,30 @@
                 {{ theme.name }}
               </span>
             </p>
-            <p class="card-text">From: {{ project.organization.country }}</p>
-
-            <a
-              [href]="project.projectLink"
-              target="_blank"
-              class="btn btn-primary mr-2"
-              >Project Page</a
-            >
-            <a
-              [href]="project.organization.url"
-              target="_blank"
-              class="btn btn-primary"
-              >Org Page</a
-            >
+            <div class="mt-auto">
+              <p class="card-text">From: {{ project.organization.country }}</p>
+              <a
+                [href]="project.projectLink"
+                target="_blank"
+                class="btn btn-primary mr-2"
+                >Project Page</a
+              >
+              <a
+                [href]="project.organization.url"
+                target="_blank"
+                class="btn btn-primary"
+                >Org Page</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
     <ngb-pagination
-      class="d-flex justify-content-end mb-3"
+      class="d-flex justify-content-lg-end justify-content-center mb-3"
       [collectionSize]="numberFound"
       [(page)]="currentPage"
-      [maxSize]="5"
+      [maxSize]="3"
       [rotate]="true"
       (pageChange)="onPageChange(currentPage)"
       [boundaryLinks]="true"
