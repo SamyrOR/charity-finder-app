@@ -35,53 +35,37 @@ Application that help find charity organizations and projects worldwide
 
 ## 💻 About
 
-I decided to study angular with some back-end integration, and i find [this book](https://www.casadocodigo.com.br/products/livro-angular-firebase?_pos=1&_sid=a78031fd4&_ss=r) with amazing resolution of best practices with angular, and working with a lot of features from firebase.
+[Charity Finder App](https://github.com/florinpop17/app-ideas/blob/master/Projects/2-Intermediate/Charity-Finder-App.md) | Find a Global Charity to donate to | 2-Intermediate |
 
-Back at 2020 i bought this book and make the project with Angular version 8, now this was updated to Angular version 11 and i decided developed it again at version 12.
+Based at project idea from [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) repository , i have found this and worked hard to make it a real app.
+
+A lot of improvement at, angular, typescript, responsive bootstrap , and API consuming skills.
+
+Think i have done a good work, that you can check down below.
 
 ---
 
 ## ⚙️ Features
 
-- [x] Login auth with Firebase Auth service.
-- [x] Manage departments
-
-  - [x] Create
-  - [x] Read
-  - [x] Update
-  - [x] Delete
-
-- [x] Manage employees
-
-  - [x] Create
-  - [x] Read
-  - [x] Update
-  - [x] Delete
-
-- [x] Manage requisitions
-
-  - [x] Create
-  - [x] Read
-  - [x] Update
-  - [x] Delete
-
-    - [x] Manage requisitions movements
-
-      - [x] Create
-      - [x] Read
-      - [x] Update
-      - [x] Delete
-
-- [x] Firebase functions
-- [x] Firebase Hosting
+- [x] User can see a page heading containing the application name.
+- [x] User can see an overview of what the app is intended for in 'splash'
+      page format.
+- [x] User can see a search area containing
+- [x] User can see a 'Search' button
+- [x] User can click on the 'Search' button to display information cards
+      for the matching organizations in a search results area.
+- [x] User can see projects information cards in the search results area
+      containing: - Project name - Theme - Organizations - Project Page - Organization Page
+- [x] User can click the button in the card footer to open a
+      new window to that organizations home page/project page.
+- [x] User can see a page footer with links to mine GitHub and social media
+      accounts including social media icons (like the LinkedIn icon).
 
 ---
 
 ## 🚀 Live demo
 
-You can see how its work for real in [requisicoes-app12.web.app](requisicoes-app12.web.app).
-
-Use as user **teste@teste.com** and **Teste@123** as password to log in.
+You can see how its work for real in [charity-finder-sor.netlify.app](https://charity-finder-sor.netlify.app/)
 
 ---
 
@@ -116,13 +100,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 The following tools were used in the construction of the project:
 
 - **[Angular](https://angular.io/)**
-- **[Firebase](https://firebase.google.com/)**
-- **[Bootstrap](https://getbootstrap.com/)**
-- **[PrimeNG](https://www.primefaces.org/)**
-- **[Nodemailer](https://nodemailer.com/about/)**
-- **[FontAwesome](https://fontawesome.com/)**
-- **[SweetAlert2](https://sweetalert2.github.io/)**
-- **[Ng-Select](https://ng-select.github.io/ng-select#/data-sources)**
+- **[NG-Bootstrap](https://ng-bootstrap.github.io/#/home)**
+- **[Global Giving API](https://www.globalgiving.org/api/)**
 
 ---
 
