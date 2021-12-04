@@ -4,12 +4,9 @@
 Application that help find charity organizations and projects worldwide
 </h3>
 
-<p align="center"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/SamyrOR/charity-finder-app
-">
-<img alt="GitHub language count" src="https://img.shields.io/github/repo-size/SamyrOR/charity-finder-app
-">
-		<img  alt="GitHub last commit"  src="https://img.shields.io/github/last-commit/SamyrOR/charity-finder-app
-">
+<p align="center"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/SamyrOR/charity-finder-app">
+<img alt="GitHub language count" src="https://img.shields.io/github/repo-size/SamyrOR/charity-finder-app">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SamyrOR/charity-finder-app">
 </p>
 <h4 align="center">
 	🚧 Under construction 🚧
